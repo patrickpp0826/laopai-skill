@@ -2,7 +2,10 @@
 
 把可观察的视觉语言整理为可安装、可复用、可持续扩展的 Agent Skills。
 
-首个风格是 **Hong Kong Editorial / 港式编辑视觉**：适合文章横版封面、小红书卡片、正文配图与街头自拍。它强调构图、光线、印刷材料、开源字体建议与少字策略，而不是用“霓虹、电影感、随机繁体字”堆出刻板港风。
+目前包含两套可独立安装的视觉 Skill：
+
+- **纸隙墨潮 / Paper-Gap Ink-Tide**：以裸露暖纸、开放回找线、断裂蓝黑墨块和局部湿水色构成的纸本混合媒介插画。适合人物、动物、场景、静物和抽象概念。
+- **Hong Kong Editorial / 港式编辑视觉**：面向文章封面、小红书卡片、正文配图与街头自拍的港式编辑系统，强调构图、光线、印刷材料、开源字体与少字策略。
 
 设计参考只用于提炼构图、字形气质、色彩与材料规则，不会作为素材上传或被逐图复刻。字体建议采用官方许可证可核验的白名单；未知招牌字、品牌定制字和来源不明的“免费字体”不会被自动用于商业输出。
 
@@ -34,6 +37,19 @@ Skill 路径：skills/laopai-visual
 ## 快速示例
 
 ```text
+用 $paper-ink-fragment-style 画一只站在旧窗台上的黑猫。
+画幅 4:5，青蓝点缀，装饰痕迹模式 none。
+直接生成图片。
+```
+
+只需要提示词时：
+
+```text
+用 $paper-ink-fragment-style 为“在逆流中重新选择方向”生成生图提示词。
+不要生成图片；输出英文正向提示词、英文负向提示词和中文核对稿。
+```
+
+```text
 用 $laopai-visual 生成一张 3:4 小红书卡片：
 标题：港风不是滤镜
 副标题：它是一套视觉系统
@@ -47,7 +63,17 @@ Skill 路径：skills/laopai-visual
 统一色板与材质，每张独立构图，正文图尽量无字。
 ```
 
-## Visual references
+## 纸隙墨潮 · Visual references
+
+| 01 · 银发肖像 | 02 · 窗边黑猫 | 03 · 雨中的码头 |
+| --- | --- | --- |
+| ![银发肖像](examples/paper-ink-showcase-2026-09/01-silver-portrait.jpg) | ![窗边黑猫](examples/paper-ink-showcase-2026-09/02-window-cat.jpg) | ![雨中的码头](examples/paper-ink-showcase-2026-09/03-ferry-rain.jpg) |
+| 04 · 腕表习作 | 05 · 早餐时刻 | 06 · 逆流的选择 |
+| ![腕表习作](examples/paper-ink-showcase-2026-09/04-watch-study.jpg) | ![早餐时刻](examples/paper-ink-showcase-2026-09/05-breakfast.jpg) | ![逆流的选择](examples/paper-ink-showcase-2026-09/06-choice-current.jpg) |
+
+六张图覆盖人物、动物、环境、静物、生活叙事与抽象概念。它们共享纸白、开放线、断裂墨块和湿水色反应，但不复用固定装饰符号。生成设定和完整提示词见 [`examples/paper-ink-showcase-2026-09/`](examples/paper-ink-showcase-2026-09/)。
+
+## 港式编辑视觉 · Visual references
 
 | 01 · City Notes | 02 · Hong Kong | 03 · Content System |
 | --- | --- | --- |
@@ -89,10 +115,14 @@ Skill 路径：skills/laopai-visual
 
 ```text
 laopai-skill/
-├── skills/laopai-visual/       # 主工作流
-├── styles/                     # 可扩展风格库
+├── skills/
+│   ├── paper-ink-fragment-style/  # 纸隙墨潮生图配方
+│   └── laopai-visual/              # 港式编辑视觉工作流
+├── styles/                     # 港式编辑风格原子
 │   └── hong-kong-editorial/
-├── examples/                   # 生成案例与完整提示词
+├── examples/
+│   ├── paper-ink-showcase-2026-09/ # 纸隙墨潮样图与提示词
+│   └── showcase-2026-09/           # 港式编辑样图与提示词
 └── CONTRIBUTING_STYLES.md
 ```
 
