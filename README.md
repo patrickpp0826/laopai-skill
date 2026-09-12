@@ -22,7 +22,10 @@ Use $laopai-visual to create a Hong Kong editorial cover for this article.
 在 Codex 中，也可以把以下内容直接发给 Agent：
 
 ```text
-请从这个 GitHub 仓库安装 Skill：<repository-url>，路径为 skills/laopai-visual。
+请从这个 GitHub 仓库安装 Skill：
+https://github.com/patrickpp0826/laopai-skill
+
+Skill 路径：skills/laopai-visual
 ```
 
 ## 快速示例
@@ -41,13 +44,23 @@ Use $laopai-visual to create a Hong Kong editorial cover for this article.
 统一色板与材质，每张独立构图，正文图尽量无字。
 ```
 
-## 生成示例
+## Visual references
+
+| 01 · City Notes | 02 · Hong Kong | 03 · Content System |
+| --- | --- | --- |
+| ![City Notes](examples/showcase-2026-09/01-city-notes.jpg) | ![Hong Kong](examples/showcase-2026-09/02-hong-kong.jpg) | ![Content System](examples/showcase-2026-09/03-content-system.jpg) |
+| 04 · On Air | 05 · Street Portrait | 06 · Visual Archive |
+| ![On Air](examples/showcase-2026-09/04-on-air.jpg) | ![Street Portrait](examples/showcase-2026-09/05-street-portrait.jpg) | ![Visual Archive](examples/showcase-2026-09/06-visual-archive.jpg) |
+
+这组 3:4 海报展示了 `hong-kong-editorial` 在城市写作、街景、内容工作流、播客封面、人物摄影和风格档案六种场景中的表现。每张图的完整提示词收录在 [`examples/showcase-2026-09/prompts/`](examples/showcase-2026-09/prompts/)。
+
+风格规则用于保持视觉语言一致，不用于逐张复刻示例图。
+
+### 其他比例
 
 | 长文横版封面 | 正文叙事配图 |
 | --- | --- |
 | ![港式编辑视觉横版封面](examples/hong-kong-cover.png) | ![港式编辑视觉正文叙事配图](examples/hong-kong-article-illustration.png) |
-
-以上是 `hong-kong-editorial` 的输出示例，不是供直接临摹的固定模板。
 
 ## 风格库
 
@@ -75,7 +88,7 @@ laopai-skill/
 ├── skills/laopai-visual/       # 主工作流
 ├── styles/                     # 可扩展风格库
 │   └── hong-kong-editorial/
-├── examples/                   # 生成案例
+├── examples/                   # 生成案例与完整提示词
 └── CONTRIBUTING_STYLES.md
 ```
 
