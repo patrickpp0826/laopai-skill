@@ -12,10 +12,11 @@
 - `xiaohongshu-card`：3:4 小红书封面或卡片。
 - `article-illustration`：16:9 正文场景图。
 - `selfie`：4:5 港风自拍与街头人像。
+- `paper-ink-fragment-style`：将裸纸、开放回找线、断裂蓝黑墨块和局部湿水色迁移到全新主体；装饰痕迹为可选变量，不复用固定纹样词库。
 
 ## 安装
 
-将仓库中的 `skills/laopai-visual` 作为 Skill 安装到支持 Agent Skills 的工具中。安装后用：
+将仓库中的 `skills/laopai-visual` 或 `skills/paper-ink-fragment-style` 作为 Skill 安装到支持 Agent Skills 的工具中。安装后用：
 
 ```text
 Use $laopai-visual to create a Hong Kong editorial cover for this article.
@@ -69,6 +70,7 @@ Skill 路径：skills/laopai-visual
 | 风格 | ID | 适合内容 |
 | --- | --- | --- |
 | 港式编辑视觉 | `hong-kong-editorial` | 港风封面、小红书卡片、文章配图、夜街人像 |
+| 纸隙墨潮 | `paper-ink-fragment-v2.1` | 人物、动物、场景、静物与抽象概念的纸本混合媒介插画 |
 
 未来每个风格都独立放在 `styles/{style-id}/` 下，包含：
 
