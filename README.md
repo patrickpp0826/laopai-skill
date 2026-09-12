@@ -4,6 +4,8 @@
 
 首个风格是 **Hong Kong Editorial / 港式编辑视觉**：适合文章横版封面、小红书卡片、正文配图与街头自拍。它强调构图、光线、印刷材料、开源字体建议与少字策略，而不是用“霓虹、电影感、随机繁体字”堆出刻板港风。
 
+设计参考只用于提炼构图、字形气质、色彩与材料规则，不会作为素材上传或被逐图复刻。字体建议采用官方许可证可核验的白名单；未知招牌字、品牌定制字和来源不明的“免费字体”不会被自动用于商业输出。
+
 ## 当前能力
 
 - `landscape-cover`：横版文章、公众号或 X 封面；默认 16:9，X 用 5:2。
@@ -99,3 +101,5 @@ laopai-skill/
 ## 许可证
 
 MIT License。生成图片、用户上传图片与第三方参考素材的权利由相应创作者、用户和图像服务条款决定。
+
+字体另按各自上游许可证执行，详见 [`font-licensing.md`](skills/laopai-visual/references/font-licensing.md)。参考素材处理规则见 [`reference-material-policy.md`](skills/laopai-visual/references/reference-material-policy.md)。
