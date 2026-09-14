@@ -80,6 +80,16 @@ Skill 路径：skills/laopai-visual
 
 六张图覆盖人物、动物、环境、静物、生活叙事与抽象概念。它们共享纸白、开放线、断裂墨块和湿水色反应，但不复用固定装饰符号。生成设定和完整提示词见 [`examples/paper-ink-showcase-2026-09/`](examples/paper-ink-showcase-2026-09/)。
 
+## 拼豆风 · Visual references
+
+| 01 · Orange Cat | 02 · Late-night Coder | 03 · Xiaohongshu Cover |
+| --- | --- | --- |
+| ![Orange Cat](examples/fused-bead-pixel-showcase-2026-09/01-orange-cat.png) | ![Late-night Coder](examples/fused-bead-pixel-showcase-2026-09/02-late-night-coder.png) | ![Xiaohongshu Cover](examples/fused-bead-pixel-showcase-2026-09/03-xiaohongshu-cover.png) |
+| 04 · WeChat Cover | 05 · X Long-form Cover | |
+| ![WeChat Cover](examples/fused-bead-pixel-showcase-2026-09/04-wechat-cover.png) | ![X Long-form Cover](examples/fused-bead-pixel-showcase-2026-09/05-x-cover.png) | |
+
+这组 5 张图覆盖 1:1 像素物件、3:4 小红书卡片、16:9 公众号封面与 5:2 X 长文横幅。每张图的生成提示词收录在 [`examples/fused-bead-pixel-showcase-2026-09/prompts/`](examples/fused-bead-pixel-showcase-2026-09/prompts/)。它们使用统一网格、有限色板与硬边阴影，但不复刻游戏角色、UI 或品牌资产。
+
 ## 港式编辑视觉 · Visual references
 
 | 01 · City Notes | 02 · Hong Kong | 03 · Content System |
@@ -131,6 +141,7 @@ laopai-skill/
 │   └── hong-kong-editorial/
 ├── examples/
 │   ├── paper-ink-showcase-2026-09/ # 纸隙墨潮样图与提示词
+│   ├── fused-bead-pixel-showcase-2026-09/ # 拼豆风样图与提示词
 │   └── showcase-2026-09/           # 港式编辑样图与提示词
 └── CONTRIBUTING_STYLES.md
 ```
