@@ -2,10 +2,11 @@
 
 把可观察的视觉语言整理为可安装、可复用、可持续扩展的 Agent Skills。
 
-目前包含两套可独立安装的视觉 Skill：
+目前包含三套可独立安装的视觉 Skill：
 
 - **纸隙墨潮 / Paper-Gap Ink-Tide**：以裸露暖纸、开放回找线、断裂蓝黑墨块和局部湿水色构成的纸本混合媒介插画。适合人物、动物、场景、静物和抽象概念。
 - **Hong Kong Editorial / 港式编辑视觉**：面向文章封面、小红书卡片、正文配图与街头自拍的港式编辑系统，强调构图、光线、印刷材料、开源字体与少字策略。
+- **Fused-Bead Pixel / 拼豆风**：以统一方格、有限色板、硬边阴影和清晰剪影生成原创像素头像、贴纸、物件与小场景。
 
 设计参考只用于提炼构图、字形气质、色彩与材料规则，不会作为素材上传或被逐图复刻。字体建议采用官方许可证可核验的白名单；未知招牌字、品牌定制字和来源不明的“免费字体”不会被自动用于商业输出。
 
@@ -16,10 +17,11 @@
 - `article-illustration`：16:9 正文场景图。
 - `selfie`：4:5 港风自拍与街头人像。
 - `paper-ink-fragment-style`：将裸纸、开放回找线、断裂蓝黑墨块和局部湿水色迁移到全新主体；装饰痕迹为可选变量，不复用固定纹样词库。
+- `fused-bead-pixel-style`：将统一像素网格、有限色板与硬边明暗迁移到全新主体；可选轻微拼豆颗粒逻辑，不复刻游戏 IP。
 
 ## 安装
 
-将仓库中的 `skills/laopai-visual` 或 `skills/paper-ink-fragment-style` 作为 Skill 安装到支持 Agent Skills 的工具中。安装后用：
+将仓库中的 `skills/laopai-visual`、`skills/paper-ink-fragment-style` 或 `skills/fused-bead-pixel-style` 作为 Skill 安装到支持 Agent Skills 的工具中。安装后用：
 
 ```text
 Use $laopai-visual to create a Hong Kong editorial cover for this article.
@@ -63,6 +65,11 @@ Skill 路径：skills/laopai-visual
 统一色板与材质，每张独立构图，正文图尽量无字。
 ```
 
+```text
+用 $fused-bead-pixel-style 画一只在窗边打盹的橘猫。
+画幅 1:1，拼豆风，pastel 色板，直接生成图片。
+```
+
 ## 纸隙墨潮 · Visual references
 
 | 01 · 银发肖像 | 02 · 窗边黑猫 | 03 · 雨中的码头 |
@@ -97,6 +104,7 @@ Skill 路径：skills/laopai-visual
 | --- | --- | --- |
 | 港式编辑视觉 | `hong-kong-editorial` | 港风封面、小红书卡片、文章配图、夜街人像 |
 | 纸隙墨潮 | `paper-ink-fragment-v2.1` | 人物、动物、场景、静物与抽象概念的纸本混合媒介插画 |
+| 拼豆风 | `fused-bead-pixel-style` | 像素头像、贴纸、物件、小场景与轻游戏感内容卡片 |
 
 未来每个风格都独立放在 `styles/{style-id}/` 下，包含：
 
@@ -117,6 +125,7 @@ Skill 路径：skills/laopai-visual
 laopai-skill/
 ├── skills/
 │   ├── paper-ink-fragment-style/  # 纸隙墨潮生图配方
+│   ├── fused-bead-pixel-style/     # 拼豆风生图配方
 │   └── laopai-visual/              # 港式编辑视觉工作流
 ├── styles/                     # 港式编辑风格原子
 │   └── hong-kong-editorial/
