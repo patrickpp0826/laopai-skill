@@ -2,11 +2,12 @@
 
 把可观察的视觉语言整理为可安装、可复用、可持续扩展的 Agent Skills。
 
-目前包含三套可独立安装的视觉 Skill：
+目前包含四套可独立安装的视觉 Skill：
 
 - **纸隙墨潮 / Paper-Gap Ink-Tide**：以裸露暖纸、开放回找线、断裂蓝黑墨块和局部湿水色构成的纸本混合媒介插画。适合人物、动物、场景、静物和抽象概念。
 - **Hong Kong Editorial / 港式编辑视觉**：面向文章封面、小红书卡片、正文配图与街头自拍的港式编辑系统，强调构图、光线、印刷材料、开源字体与少字策略。
 - **Fused-Bead Pixel / 拼豆风**：以统一方格、有限色板、硬边阴影和清晰剪影生成原创像素头像、贴纸、物件与小场景。
+- **昭和票券插画 / 日本复古邮票感**：从 19 张日本宝くじ票券提炼童趣剪纸插画、分区排版、套色油墨与纹章结构；可用于新主题的票券式封面或纯插画。
 
 设计参考只用于提炼构图、字形气质、色彩与材料规则，不会作为素材上传或被逐图复刻。字体建议采用官方许可证可核验的白名单；未知招牌字、品牌定制字和来源不明的“免费字体”不会被自动用于商业输出。
 
@@ -18,10 +19,11 @@
 - `selfie`：4:5 港风自拍与街头人像。
 - `paper-ink-fragment-style`：将裸纸、开放回找线、断裂蓝黑墨块和局部湿水色迁移到全新主体；装饰痕迹为可选变量，不复用固定纹样词库。
 - `fused-bead-pixel-style`：将统一像素网格、有限色板与硬边明暗迁移到全新主体；可选轻微拼豆颗粒逻辑，不复刻游戏 IP。
+- `showa-ticket-illustration-style`：将昭和票券的插画、套色印刷与信息分区用于原创主题；“日本复古邮票风”可作为调用别名。
 
 ## 安装
 
-将仓库中的 `skills/laopai-visual`、`skills/paper-ink-fragment-style` 或 `skills/fused-bead-pixel-style` 作为 Skill 安装到支持 Agent Skills 的工具中。安装后用：
+将仓库中 `skills/` 下需要的单独风格目录作为 Skill 安装到支持 Agent Skills 的工具中。安装后用：
 
 ```text
 Use $laopai-visual to create a Hong Kong editorial cover for this article.
@@ -70,6 +72,21 @@ Skill 路径：skills/laopai-visual
 画幅 1:1，拼豆风，pastel 色板，直接生成图片。
 ```
 
+```text
+用 $showa-ticket-illustration-style 为“春日散步”做一张横版文章封面。
+只借昭和票券的印刷与插画语言，标题留空供后期排字；先给我提示词。
+```
+
+## 昭和票券插画 · Visual references
+
+| 01 · 重新出发封面 | 02 · 信息过载卡片 |
+| --- | --- |
+| ![重新出发封面](examples/showa-ticket-showcase-2026-09/01-beginning-again-cover.png) | ![信息过载卡片](examples/showa-ticket-showcase-2026-09/02-information-overload-card.png) |
+| 03 · 雨天散步插画 | 04 · 火车票券明信片 |
+| ![雨天散步插画](examples/showa-ticket-showcase-2026-09/03-rainy-walk-illustration.png) | ![火车票券明信片](examples/showa-ticket-showcase-2026-09/04-train-postcard.png) |
+
+四张样图分别验证横版内容封面、3:4 内容卡片、无票券结构的正文插画和票券式明信片。完整生成提示词收录在 [`examples/showa-ticket-showcase-2026-09/prompts/`](examples/showa-ticket-showcase-2026-09/prompts/)。图片使用相同的暖米白纸、有限套色、纸片形体与轻微错版印刷，但不复刻历史票券的编号、机构字样或防伪花纹。
+
 ## 纸隙墨潮 · Visual references
 
 | 01 · 银发肖像 | 02 · 窗边黑猫 | 03 · 雨中的码头 |
@@ -115,6 +132,7 @@ Skill 路径：skills/laopai-visual
 | 港式编辑视觉 | `hong-kong-editorial` | 港风封面、小红书卡片、文章配图、夜街人像 |
 | 纸隙墨潮 | `paper-ink-fragment-v2.1` | 人物、动物、场景、静物与抽象概念的纸本混合媒介插画 |
 | 拼豆风 | `fused-bead-pixel-style` | 像素头像、贴纸、物件、小场景与轻游戏感内容卡片 |
+| 昭和票券插画 | `showa-ticket-illustration-style` | 原创票券式封面、内容卡片和童趣平面插画 |
 
 未来每个风格都独立放在 `styles/{style-id}/` 下，包含：
 
@@ -136,12 +154,14 @@ laopai-skill/
 ├── skills/
 │   ├── paper-ink-fragment-style/  # 纸隙墨潮生图配方
 │   ├── fused-bead-pixel-style/     # 拼豆风生图配方
+│   ├── showa-ticket-illustration-style/ # 昭和票券插画生图配方
 │   └── laopai-visual/              # 港式编辑视觉工作流
 ├── styles/                     # 港式编辑风格原子
 │   └── hong-kong-editorial/
 ├── examples/
 │   ├── paper-ink-showcase-2026-09/ # 纸隙墨潮样图与提示词
 │   ├── fused-bead-pixel-showcase-2026-09/ # 拼豆风样图与提示词
+│   ├── showa-ticket-showcase-2026-09/ # 昭和票券插画样图与提示词
 │   └── showcase-2026-09/           # 港式编辑样图与提示词
 └── CONTRIBUTING_STYLES.md
 ```
